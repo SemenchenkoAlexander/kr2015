@@ -8,7 +8,7 @@ import java.awt.Rectangle;
 
 public abstract class MapObject {
 	
-	// tile stuff
+
 	protected TileMap tileMap;
 	protected int tileSize;
 	protected double xmap;
@@ -20,7 +20,7 @@ public abstract class MapObject {
 	protected double dx;
 	protected double dy;
 	
-	// dimensions
+
 	protected int width;
 	protected int height;
 	
@@ -54,7 +54,7 @@ public abstract class MapObject {
 	protected boolean jumping;
 	protected boolean falling;
 	
-	// movement attributes
+
 	protected double moveSpeed;
 	protected double maxSpeed;
 	protected double stopSpeed;
@@ -63,7 +63,7 @@ public abstract class MapObject {
 	protected double jumpStart;
 	protected double stopJumpSpeed;
 	
-	// constructor
+
 	public MapObject(TileMap tm) {
 		tileMap = tm;
 		tileSize = tm.getTileSize(); 

@@ -1,16 +1,16 @@
 package TileMap;
 
-import java.awt.*;
-import java.awt.image.*;
-
-import java.io.*;
-import javax.imageio.ImageIO;
-
 import Main.GamePanel;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 public class TileMap {
-	
-	// position
+
 	private double x;
 	private double y;
 	
@@ -21,16 +21,14 @@ public class TileMap {
 	private int ymax;
 	
 	private double tween;
-	
-	// map
+
 	private int[][] map;
 	private int tileSize;
 	private int numRows;
 	private int numCols;
 	private int width;
 	private int height;
-	
-	// tileset
+
 	private BufferedImage tileset;
 	private int numTilesAcross;
 	private Tile[][] tiles;
@@ -98,14 +96,11 @@ public class TileMap {
 			width = numCols * tileSize;
 			height = numRows * tileSize;
 			
-<<<<<<< HEAD
 			xmin = GamePanel.WIDTH - width;
 			xmax = 0;
 			ymin = GamePanel.HEIGHT - height;
 			ymax = 0;
 			
-=======
->>>>>>> 9a33ff1aba840776eb498aa48176e2d3372ef271
 			String delims = "\\s+";
 			for(int row = 0; row < numRows; row++) {
 				String line = br.readLine();
@@ -123,13 +118,8 @@ public class TileMap {
 	}
 	
 	public int getTileSize() { return tileSize; }
-<<<<<<< HEAD
 	public double getx() { return x; }
 	public double gety() { return y; }
-=======
-	public int getx() { return (int)x; }
-	public int gety() { return (int)y; }
->>>>>>> 9a33ff1aba840776eb498aa48176e2d3372ef271
 	public int getWidth() { return width; }
 	public int getHeight() { return height; }
 	
@@ -140,11 +130,8 @@ public class TileMap {
 		return tiles[r][c].getType();
 	}
 	
-<<<<<<< HEAD
 	public void setTween(double d) { tween = d; }
 	
-=======
->>>>>>> 9a33ff1aba840776eb498aa48176e2d3372ef271
 	public void setPosition(double x, double y) {
 		
 		this.x += (x - this.x) * tween;
